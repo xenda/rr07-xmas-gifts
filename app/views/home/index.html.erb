@@ -1,0 +1,9 @@
+Registra tus regalos!
+<% if session[:current_user] %>
+  Bienvenido <%= session[:current_user] %>
+  <%= link_to "Salir", "/sign_out" %>
+<% else %>
+  <%= link_to "Inicia Sesión con Twitter", "/auth/twitter" %>
+  <%= link_to "Inicia Sesión con Facebook", "/auth/facebook" %>
+  <%= link_to "Inicia Sesión con Foursquare", "/auth/foursquare" %>
+<% end %>
